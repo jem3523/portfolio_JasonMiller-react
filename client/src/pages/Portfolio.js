@@ -1,19 +1,15 @@
-import React, { useState , useEffect } from "react";
+import React, { useState } from "react";
 import Card from "../components/Card";
 import myapps from "../MyApps.json";
 
 function Portfolio() 
 {
-  const [state, setState] = useState({})
+  const [state, setState] = useState({currentCard: -1})
 
-  // load JSON file
-  useEffect(() => setState(myapps))
-
-
-  function handleShowLink (e)
+ 
+ function handleShowLink (id)
   {
-    //setState({ ...state, showLinks : false});
-    this.setState({ ...state, showLinks : true});
+    setState({ currentCard: id});
   }
 
 
@@ -25,9 +21,10 @@ function Portfolio()
           </div>
       </div>
       <div className="row">
-        {myapps.map(myapp => (
+        {myapps.map(myapp => ( 
+        <div onClick   = {() => handleShowLink(myapp.id)}>
           <Card 
-            key={myapp.id}
+            key       = {myapp.id}
             appLink   = {myapp.appLink}
             gitLink   = {myapp.gitLink}
             imgLink   = {myapp.imgLink}
@@ -35,9 +32,9 @@ function Portfolio()
             toolText  = {myapp.toolText}
             appName   = {myapp.appName}
             id        = {myapp.id}
-            showLinks = {myapp.showLinks}
-            onClick   = {handleShowLink} 
+            showLinks = {myapp.id === state.currentCard}      //this returns either T/F for the embedded conditional
           />
+         </div> 
         ))}
       </div>
     </div>

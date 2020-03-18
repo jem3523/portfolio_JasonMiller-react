@@ -13,7 +13,7 @@ function Card(props)
         className="img-responsive py-2"
       />
 
-      <div className ="imageHolderText" onClick={props.handleShowLink}>{props.appName}
+      <div className ="imageHolderText">{props.appName}
         <span className ="tooltiptext">{props.toolText}</span>
       </div>
 
@@ -22,8 +22,8 @@ function Card(props)
       {
         (props.showLinks === false) ? "" :
         <div>
-          <div className = 'moreInfoDetail'><a className = 'font-green' href ={props.appLink} target='_blank' rel='noopener noreferrer'>Live Application</a></div>
-          <div className = 'moreInfoDetail'><a className = 'font-green' href ={props.gitLink} target='_blank' rel='noopener noreferrer'>GitHub Source</a></div>
+          <div className = 'moreInfoDetail'><a className = 'font-green' href ={props.appLink} target='_blank' rel='noopener noreferrer'>Live&nbsp;Application</a></div>
+          <div className = 'moreInfoDetail'><a className = 'font-green' href ={props.gitLink} target='_blank' rel='noopener noreferrer'>GitHub&nbsp;Source</a></div>
         </div>
       }
   </div>
