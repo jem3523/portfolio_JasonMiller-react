@@ -6,7 +6,8 @@
       "imgLink"  : "assets/images/image01.jpg",
       "imgAlt"   : "image 01",
       "toolText" : "Utilizes javascript, jQuery, bootstrap, express, handlebars, mySQL, sequelize, xios, heroku",
-      "appName"  : "Link Library"
+      "appName"  : "Link Library",
+      "showLinks":  true
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "imgLink"  : "assets/images/image05.jpg",
         "imgAlt"   : "image 05",
         "toolText" : "Utilizes javascript, jquery, and API calls",
-        "appName"  : "Pantry Palate"
+        "appName"  : "Pantry Palate",
+        "showLinks":  false
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "imgLink"  : "assets/images/image04.jpg",
         "imgAlt"   : "image 04",
         "toolText" : "Utilizes javascript, jquery, bootstrap, API calls, and local storage",
-        "appName"  : "Weather Dashboard"
+        "appName"  : "Weather Dashboard",
+        "showLinks":  false
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "imgLink"  : "assets/images/image02.jpg",
         "imgAlt"   : "image 02",
         "toolText" : "Utilizes javascript, bootstrap, and local storage to build dynamic html pages",
-        "appName"  : "Quiz Fun"
+        "appName"  : "Quiz Fun",
+        "showLinks":  false
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "imgLink"  : "assets/images/image03.jpg",
         "imgAlt"   : "image 03",
         "toolText" : "Utilizes javaScript, mySQL, express, and heroku",
-        "appName"  : "My Daily Notes"
+        "appName"  : "My Daily Notes",
+        "showLinks":  false
     },
     {
         "id": 6,
@@ -51,6 +56,7 @@
         "imgLink"  : "assets/images/image06.jpg",
         "imgAlt"   : "image 06",
         "toolText" : "Utilizes React, bootstrap, and heroku",
-        "appName"  : "React Table"
+        "appName"  : "React Table",
+        "showLinks":  false
     }
   ]
