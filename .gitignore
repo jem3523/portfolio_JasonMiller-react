@@ -25,4 +25,5 @@ yarn-debug.log*
 yarn-error.log*
 
 /OLD
-
+/package-lock.json
+/client/package-lock.json
