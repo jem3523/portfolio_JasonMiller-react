@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 
 function Contact()
@@ -28,35 +28,35 @@ function Contact()
     //make sure name and email are not empty
     if (!enteredName || !enteredEmail || !enteredMessage) 
     {
-        console.log("Name, email, and message are all required.");
-        return
-    };
-
-    // create an object of the column name key:value pair
-    let newMessage = {name: enteredName, email: enteredEmail, message: enteredMessage};
-    console.log (newMessage);
-
-    // could I use https://jmillerportfolio.herokuapp.com to make this work?
-    axios(
-    {
-      method: "POST", 
-      url:"http://localhost:3001/send", 
-      data:
+      console.log("Name, email, and message are all required.")
+    }
+    else
+    {  
+      axios(
       {
-        name: enteredName,
-        email: enteredEmail,
-        message:  enteredMessage
-      }
-    });
+        method: "POST", 
+        url:"http://localhost:3001/send", 
+        data:
+        {
+          name: enteredName,
+          email: enteredEmail,
+          message:  enteredMessage
+        }
+      });
 
+      setStateForm(
+      {
+        enteredName : "",
+        enteredEmail : "",
+        enteredMessage : ""
+      });
 
-    setStateForm(
-    {
-      enteredName    : "",
-      enteredEmail   : "",
-      enteredMessage : ""
-    });
-  };
+      document.getElementById('input_name').value = "";
+      document.getElementById('input_email').value = "";
+      document.getElementById('input_message').value = "";
+
+    };
+};
 
     return (
       <div className="container background-white pb-3 mt-3">
@@ -76,6 +76,7 @@ function Contact()
                 type="text"
                 placeholder="Enter Full Name"
                 className="form-control"
+                id="input_name"
               />
           </div>
           <div className="form-group">
@@ -86,6 +87,7 @@ function Contact()
                 type="email"
                 placeholder="Enter Email"
                 className="form-control"
+                id="input_email"
               />
           </div>
           <div className="form-group">
@@ -96,6 +98,7 @@ function Contact()
                 type="text"
                 placeholder="Enter Message"
                 className="form-control"
+                id="input_message"
               />
           </div>
           <div className="form-group">
