@@ -26,8 +26,7 @@ let transporter = nodemailer.createTransport(
   auth: 
   {
       user: "jaericm@yahoo.com",
-      pass: "odjklncmulugowsm"
-      //pass: process.env.yahooPW
+      pass: process.env.yahooPW
   },
   debug: true,
   logger: true

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 function Contact()
@@ -35,7 +35,8 @@ function Contact()
       axios(
       {
         method: "POST", 
-        url:"http://localhost:3001/send", 
+        //url:"http://localhost:3001/send",
+        url: process.env.PORT, 
         data:
         {
           name: enteredName,
